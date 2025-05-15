@@ -7,14 +7,14 @@ class Manufacturer(models.Model):
     country = models.CharField(max_length=255)
 
     class Meta:
-        ordering = ('name', 'country')
+        ordering = ("name", "country")
 
 
 class Driver(AbstractUser):
     license_number = models.CharField(max_length=255, unique=True)
 
     class Meta:
-        ordering = ('first_name', 'last_name')
+        ordering = ("first_name", "last_name")
 
 
 class Car(models.Model):
