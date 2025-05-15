@@ -1,4 +1,3 @@
-from django.contrib.admin.templatetags.admin_list import pagination
 from django.shortcuts import render
 from django.views import generic
 
