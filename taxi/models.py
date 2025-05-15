@@ -7,14 +7,14 @@ class Manufacturer(models.Model):
     country = models.CharField(max_length=255)
 
     class Meta:
-        ordering = ("name", "country")
+        ordering = ("name",)
 
 
 class Driver(AbstractUser):
     license_number = models.CharField(max_length=255, unique=True)
 
     class Meta:
-        ordering = ("first_name", "last_name")
+        ordering = ("first_name",)
 
 
 class Car(models.Model):
@@ -25,4 +25,4 @@ class Car(models.Model):
     drivers = models.ManyToManyField(Driver, related_name="cars")
 
     class Meta:
-        ordering = ("model", "manufacturer")
+        ordering = ("manufacturer",)
